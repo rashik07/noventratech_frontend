@@ -27,8 +27,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-slate-900 font-bold text-lg mb-1">Email Us</h4>
-                  <p className="text-slate-600">hello@noventratech.com</p>
-                  <p className="text-slate-600">support@noventratech.com</p>
+                  <p className="text-slate-600">saif67090707@gmail.com</p>
                 </div>
               </div>
               
@@ -38,8 +37,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-slate-900 font-bold text-lg mb-1">Call Us</h4>
-                  <p className="text-slate-600">+1 (555) 123-4567</p>
-                  <p className="text-slate-600">Mon-Fri, 9am to 6pm EST</p>
+                  <p className="text-slate-600">01767090707</p>
                 </div>
               </div>
 
@@ -49,8 +47,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-slate-900 font-bold text-lg mb-1">Visit Us</h4>
-                  <p className="text-slate-600">100 Tech Square, Innovation Center</p>
-                  <p className="text-slate-600">New York, NY 10001, USA</p>
+                  <p className="text-slate-600">Road:2, Kallyanpur</p>
+                  <p className="text-slate-600">Dhaka</p>
                 </div>
               </div>
             </div>
