@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 export function Pricing() {
   const plans = [
@@ -95,7 +96,7 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <a
+              <Link
                 href="#contact"
                 className={`w-full py-4 rounded-xl font-bold text-center transition-all ${
                   plan.popular 
@@ -104,7 +105,7 @@ export function Pricing() {
                 }`}
               >
                 Choose {plan.name}
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

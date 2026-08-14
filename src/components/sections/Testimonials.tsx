@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import Image from "next/image";
 
 export function Testimonials() {
   const testimonials = [
@@ -58,11 +59,15 @@ export function Testimonials() {
               <p className="text-slate-700 mb-8 italic leading-relaxed">"{testimonial.text}"</p>
               
               <div className="flex items-center gap-4 mt-auto">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-blue-200"
-                />
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-blue-200">
+                  <Image 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    fill
+                    sizes="48px"
+                    className="object-cover"
+                  />
+                </div>
                 <div>
                   <h4 className="text-slate-900 font-bold">{testimonial.name}</h4>
                   <p className="text-sm text-slate-500">{testimonial.role}</p>

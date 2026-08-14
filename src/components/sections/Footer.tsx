@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -13,19 +16,21 @@ export function Footer() {
 
           {/* Brand Col */}
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center space-x-2">
-              <img src="/nlogo.png" alt="NoventraTech Logo" className="h-12 md:h-16 w-auto object-contain" />
-            </a>
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="relative h-12 md:h-16 w-32">
+                <Image src="/nlogo.png" alt="NoventraTech Logo" fill className="object-contain" sizes="(max-width: 768px) 128px, 160px" />
+              </div>
+            </Link>
             <p className="text-slate-400 leading-relaxed max-w-sm mb-6">
               A premium software development agency specializing in enterprise solutions, mobile applications, and AI integrations.
             </p>
             <div className="flex space-x-4">
               {['Twitter', 'LinkedIn', 'GitHub', 'Dribbble'].map((social) => (
-                <a key={social} href="#" className="w-10 h-10 rounded-full bg-slate-800 hover:bg-[#FF6600]/20 flex items-center justify-center text-slate-400 hover:text-white transition-all border border-slate-700">
+                <Link key={social} href="#" className="w-10 h-10 rounded-full bg-slate-800 hover:bg-[#FF6600]/20 flex items-center justify-center text-slate-400 hover:text-white transition-all border border-slate-700">
                   <span className="sr-only">{social}</span>
                   {/* Placeholder for icons */}
                   <div className="w-4 h-4 bg-current opacity-50 rounded-sm"></div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -36,7 +41,7 @@ export function Footer() {
             <ul className="space-y-4">
               {['Web Development', 'Mobile Apps', 'SaaS Solutions', 'AI Automation', 'Cloud & DevOps'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">{item}</a>
+                  <Link href="#" className="text-slate-400 hover:text-blue-400 transition-colors">{item}</Link>
                 </li>
               ))}
             </ul>
@@ -48,7 +53,7 @@ export function Footer() {
             <ul className="space-y-4">
               {['About Us', 'Careers', 'Blog', 'Case Studies', 'Contact'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">{item}</a>
+                  <Link href="#" className="text-slate-400 hover:text-blue-400 transition-colors">{item}</Link>
                 </li>
               ))}
             </ul>
@@ -83,9 +88,9 @@ export function Footer() {
             &copy; {currentYear} NoventraTech. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-slate-500 hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="text-slate-500 hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="text-slate-500 hover:text-white transition-colors">Cookie Policy</a>
+            <Link href="#" className="text-slate-500 hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="#" className="text-slate-500 hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="#" className="text-slate-500 hover:text-white transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

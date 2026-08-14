@@ -10,6 +10,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "NOVENTRATECH | Premium Software Development",
   description: "Transforming Ideas Into Powerful Digital Solutions",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

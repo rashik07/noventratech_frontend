@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export function Blog() {
   const posts = [
@@ -43,9 +45,9 @@ export function Blog() {
               Stay updated with the latest trends, tips, and insights from our engineering and design teams.
             </p>
           </div>
-          <a href="#" className="hidden md:flex items-center text-[#008080] hover:text-[#006666] transition-colors font-medium">
+          <Link href="#" className="hidden md:flex items-center text-[#008080] hover:text-[#006666] transition-colors font-medium">
             View All Articles <ArrowRight className="ml-2 w-4 h-4" />
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -62,10 +64,12 @@ export function Blog() {
                 <div className="absolute top-4 left-4 z-10 bg-[#FF6600] text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
                   {post.category}
                 </div>
-                <img 
+                <Image 
                   src={post.image} 
                   alt={post.title} 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transform group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
                 />
               </div>
 
@@ -90,9 +94,9 @@ export function Blog() {
                 </p>
 
                 <div className="mt-auto pt-4 border-t border-slate-100">
-                  <a href="#" className="inline-flex items-center text-[#008080] hover:text-[#006666] text-sm font-medium transition-colors">
+                  <Link href="#" className="inline-flex items-center text-[#008080] hover:text-[#006666] text-sm font-medium transition-colors">
                     Read Article <ArrowRight className="ml-2 w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>

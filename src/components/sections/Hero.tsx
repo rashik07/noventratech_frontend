@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Code2, Users, FolderKanban } from "lucide-react";
+import Link from "next/link";
 
 export function Hero() {
   const stats = [
@@ -61,19 +62,19 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
             >
-              <a
+              <Link
                 href="#contact"
                 className="group flex items-center justify-center px-8 py-4 rounded-full bg-[#FF6600] hover:bg-[#e65c00] text-white font-medium transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.39)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.23)]"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#projects"
                 className="flex items-center justify-center px-8 py-4 rounded-full bg-white hover:bg-slate-50 border border-slate-200 text-slate-900 font-medium transition-all shadow-sm"
               >
                 View Portfolio
-              </a>
+              </Link>
             </motion.div>
 
             {/* Stats */}

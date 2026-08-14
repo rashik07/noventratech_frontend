@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export function FeaturedProjects() {
   const projects = [
@@ -26,20 +28,20 @@ export function FeaturedProjects() {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-slate-50 border-y border-slate-200">
+    <section id="case-study" className="py-24 bg-slate-50 border-y border-slate-200">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-slate-900">
-              Featured <span className="text-[#008080]">Projects</span>
+              Featured <span className="text-[#008080]">Case Study</span>
             </h2>
             <p className="text-slate-600 text-lg">
               Explore some of our recent work where we've helped businesses transform their digital presence and operations.
             </p>
           </div>
-          <a href="#" className="hidden md:flex items-center text-[#008080] hover:text-[#006666] transition-colors font-medium">
-            View All Projects <ArrowRight className="ml-2 w-4 h-4" />
-          </a>
+          <Link href="#" className="hidden md:flex items-center text-[#008080] hover:text-[#006666] transition-colors font-medium">
+            View All Case Studies <ArrowRight className="ml-2 w-4 h-4" />
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -55,10 +57,12 @@ export function FeaturedProjects() {
               {/* Project Image */}
               <div className="relative h-60 w-full overflow-hidden">
                 <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors z-10"></div>
-                <img 
+                <Image 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
 
@@ -75,12 +79,12 @@ export function FeaturedProjects() {
                 <p className="text-slate-600 mb-6">{project.description}</p>
                 
                 <div className="flex items-center gap-4">
-                  <a href="#" className="flex-1 flex items-center justify-center py-2.5 bg-[#FF6600] hover:bg-[#e65c00] text-white rounded-lg font-medium transition-colors shadow-sm">
+                  <Link href="#" className="flex-1 flex items-center justify-center py-2.5 bg-[#FF6600] hover:bg-[#e65c00] text-white rounded-lg font-medium transition-colors shadow-sm">
                     Live Demo
-                  </a>
-                  <a href="#" className="flex items-center justify-center p-2.5 bg-white hover:bg-slate-50 text-slate-700 rounded-lg transition-colors border border-slate-200 shadow-sm">
+                  </Link>
+                  <Link href="#" className="flex items-center justify-center p-2.5 bg-white hover:bg-slate-50 text-slate-700 rounded-lg transition-colors border border-slate-200 shadow-sm">
                     <ExternalLink className="w-5 h-5" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>
