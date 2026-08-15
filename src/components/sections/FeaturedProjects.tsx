@@ -8,22 +8,25 @@ import Image from "next/image";
 export function FeaturedProjects() {
   const projects = [
     {
-      title: "FinTech Dashboard",
-      description: "A comprehensive financial analytics dashboard for enterprise clients.",
+      title: "LFC (Ladies Fashion Corner)",
+      link: "/case-study/lfc",
+      description: "A comprehensive retail management platform integrating POS, supply chain management, and robust inventory tracking.",
+      image: "/Main/CaseStudy/LFC/1.png",
+      tags: ["Retail", "POS", "Inventory Management"],
+    },
+    {
+      title: "SBE (S Brothers Limited)",
+      link: "/case-study/sbe",
+      description: "A centralized Enterprise Resource Planning system integrating HRM, CRM, Sales, and Inventory Management.",
+      image: "/Main/CaseStudy/SBE/1.png",
+      tags: ["ERP", "HRM & CRM", "Inventory Management"],
+    },
+    {
+      title: "EIMS (Education Institute Management System)",
+      link: "/case-study/eims",
+      description: "A comprehensive EdTech solution covering everything from admissions and enrollment to exams, attendance, results, and teacher HRM.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-      tags: ["React", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      title: "AI E-commerce Platform",
-      description: "Smart e-commerce solution with AI-powered product recommendations.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-      tags: ["Next.js", "Python", "AWS"],
-    },
-    {
-      title: "Healthcare App",
-      description: "Telemedicine mobile application for seamless doctor-patient connectivity.",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop",
-      tags: ["React Native", "Node.js", "MongoDB"],
+      tags: ["EdTech", "School Management", "HRM"],
     },
   ];
 
@@ -79,11 +82,11 @@ export function FeaturedProjects() {
                 <p className="text-slate-600 mb-6">{project.description}</p>
                 
                 <div className="flex items-center gap-4">
-                  <Link href="#" className="flex-1 flex items-center justify-center py-2.5 bg-[#FF6600] hover:bg-[#e65c00] text-white rounded-lg font-medium transition-colors shadow-sm">
-                    Live Demo
+                  <Link href={project.link} className="flex-1 flex items-center justify-center py-2.5 bg-[#FF6600] hover:bg-[#e65c00] text-white rounded-lg font-medium transition-colors shadow-sm">
+                    View Case Study
                   </Link>
-                  <Link href="#" className="flex items-center justify-center p-2.5 bg-white hover:bg-slate-50 text-slate-700 rounded-lg transition-colors border border-slate-200 shadow-sm">
-                    <ExternalLink className="w-5 h-5" />
+                  <Link href={project.link} className="flex items-center justify-center p-2.5 bg-white hover:bg-slate-50 text-slate-700 rounded-lg transition-colors border border-slate-200 shadow-sm">
+                    <ArrowRight className="w-5 h-5" />
                   </Link>
                 </div>
               </div>

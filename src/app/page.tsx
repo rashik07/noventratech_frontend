@@ -18,7 +18,7 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground selection:bg-[#008080]/100/30 selection:text-blue-200">
       <Navbar />
       <Hero />
-      <TrustedBy />
+      {/* <TrustedBy /> */}
       <Services />
       <WhyChooseUs />
       <TechStack />
