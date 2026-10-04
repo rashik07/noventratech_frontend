@@ -54,7 +54,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <div className="flex items-center justify-center relative w-40 h-14 md:w-56 md:h-20">
-            <Image src="/nlogo.png" alt="NoventraTech Logo" fill className="object-contain" sizes="(max-width: 768px) 160px, 224px" />
+            <Image src="/nlogo.png" alt="NoventraTech Logo" fill priority className="object-contain" sizes="(max-width: 768px) 160px, 224px" />
           </div>
         </Link>
 
