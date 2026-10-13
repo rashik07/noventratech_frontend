@@ -47,7 +47,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-slate-900 font-bold text-lg mb-1">Email Us</h4>
-                  <p className="text-slate-600">saif67090707@gmail.com</p>
+                  <p className="text-slate-600">info@noventratech.net</p>
                 </div>
               </div>
               
