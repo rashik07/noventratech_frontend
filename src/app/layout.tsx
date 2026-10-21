@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { GoogleTranslator } from "@/components/ui/GoogleTranslator";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} antialiased scroll-smooth`}>
       <body className="min-h-full bg-background text-foreground overflow-x-hidden">
+        <GoogleTranslator />
         {children}
       </body>
     </html>

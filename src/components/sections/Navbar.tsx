@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { LanguageSelector } from "@/components/ui/LanguageSelector";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -121,8 +122,9 @@ export function Navbar() {
           ))}
         </nav>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
+        {/* Desktop CTA & Language Selector */}
+        <div className="hidden md:flex items-center space-x-4">
+          <LanguageSelector />
           <Link
             href="#contact"
             className="px-6 py-2.5 rounded-full bg-[#FF6600] hover:bg-[#e65c00] text-white font-medium transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.39)] hover:shadow-[0_6px_20px_rgba(37,99,235,0.23)] inline-block"
@@ -131,13 +133,17 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-slate-900"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu Toggle & Selector */}
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageSelector />
+          <button
+            className="text-slate-900 p-1"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}
