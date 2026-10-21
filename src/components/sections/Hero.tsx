@@ -15,7 +15,7 @@ import {
   Activity,
   Layers,
   Star,
-  ExternalLink,
+  // ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -175,7 +175,7 @@ export function Hero() {
             </motion.div>
 
             {/* Client Ratings / Social Proof */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -205,7 +205,7 @@ export function Hero() {
                 </div>
                 <span className="text-slate-500 text-xs">Trusted by 120+ fast-growing companies</span>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Right Column: Interactive Tech Visual Hub & Mockup */}
