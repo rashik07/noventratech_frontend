@@ -60,6 +60,7 @@ export function Hero() {
       border: "border-purple-500/20",
     },
   ];
+  
 
   const benefits = [
     "Enterprise-Grade Scalability",
