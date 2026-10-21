@@ -40,24 +40,29 @@ export function Contact() {
               Ready to start your next big project? Get in touch with our team of experts to discuss your ideas and requirements.
             </p>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 rounded-xl bg-[#008080]/20 flex items-center justify-center text-[#008080] shrink-0 border border-blue-200">
+                <div className="w-12 h-12 rounded-xl bg-[#008080]/20 flex items-center justify-center text-[#008080] shrink-0 border border-teal-200">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
                   <h4 className="text-slate-900 font-bold text-lg mb-1">Email Us</h4>
-                  <p className="text-slate-600">info@noventratech.net</p>
+                  <a href="mailto:info@noventratech.net" className="text-slate-600 hover:text-[#008080] transition-colors">
+                    info@noventratech.net
+                  </a>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 shrink-0 border border-purple-200">
-                  <Phone className="w-6 h-6" />
+                  <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-slate-900 font-bold text-lg mb-1">Call Us</h4>
-                  <p className="text-slate-600">+88017-67090707</p>
+                  <h4 className="text-slate-900 font-bold text-lg mb-1">Bangladesh Office</h4>
+                  <p className="text-slate-600">Road:2, Kallyanpur, Dhaka-1207, Bangladesh</p>
+                  <p className="text-slate-600 text-sm mt-1">
+                    Phone: <a href="tel:+8801724618480" className="hover:text-purple-600 transition-colors">+88017-24618480</a>
+                  </p>
                 </div>
               </div>
 
@@ -66,9 +71,11 @@ export function Contact() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-slate-900 font-bold text-lg mb-1">Visit Us</h4>
-                  <p className="text-slate-600">Road:2, Kallyanpur, Dhaka-1207</p>
-                  <p className="text-slate-600">Bangladesh</p>
+                  <h4 className="text-slate-900 font-bold text-lg mb-1">Australia Office</h4>
+                  <p className="text-slate-600">Fred Pham Crescent, Doolandella, Queensland 4077, Australia</p>
+                  <p className="text-slate-600 text-sm mt-1">
+                    Phone: <a href="tel:+61410028061" className="hover:text-indigo-600 transition-colors">+61410028061</a>
+                  </p>
                 </div>
               </div>
             </div>
