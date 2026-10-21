@@ -8,6 +8,7 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
   title: "NOVENTRATECH | Premium Software Development",
   description: "Transforming Ideas Into Powerful Digital Solutions",
